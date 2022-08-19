@@ -4,7 +4,6 @@ import HeaderLeftBlock from '../header-left-block/header-left-block';
 import HeaderRightBlock from '../header-right-block/header-right-block';
 
 
-
 function Header() {
 
   return (

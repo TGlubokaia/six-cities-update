@@ -18,6 +18,15 @@ function CitiesOffersList() {
       <Grid item xs={6}>
         <OfferItem />
       </Grid>
+      <Grid item xs={6}>
+        <OfferItem />
+      </Grid>
+      <Grid item xs={6}>
+        <OfferItem />
+      </Grid>
+      <Grid item xs={6}>
+        <OfferItem />
+      </Grid>
     </Grid>
   )
 }

@@ -1,28 +1,48 @@
 import React from 'react';
+import styled from '@emotion/styled'
 import { List, ListItem, Link, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
+
+const AuthList = styled(List)`
+  display: flex;
+`
+const AuthLink = styled(Link)`
+  display: flex;
+  font-size: 14px;
+  color: inherit;
+  line-height: 1.2143;
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-shadow .3s;
+  &:hover {text-shadow: 0.5px 0 0, -0.5px 0 0;}
+  &:focus {text-shadow: 0.5px 0 0, -0.5px 0 0;}
+`
+const AuthText = styled(ListItemText)`
+  display: flex;
+  align-items: center;
+`
 
 function HeaderRightBlock() {
   return (
     <nav aria-label="authorization">
-      <List>
+      <AuthList>
         <ListItem>
-          <Link>
+          <AuthLink>
             <ListItemAvatar>
               <Avatar alt="user avatar" src="../img/avatar.svg" />
             </ListItemAvatar>
-            <ListItemText>
-                Name Surname
-              </ListItemText>
-          </Link>
+            <AuthText>
+              email@gmail.com
+            </AuthText>
+          </AuthLink>
         </ListItem>
         <ListItem>
-          <Link>
-            <ListItemText>
+          <AuthLink>
+            <AuthText>
               Sigh out
-            </ListItemText>
-          </Link>
+            </AuthText>
+          </AuthLink>
         </ListItem>
-      </List>
+      </AuthList>
     </ nav>
 
   )
