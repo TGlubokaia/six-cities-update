@@ -4,6 +4,12 @@ import { Container, Box } from '@mui/material';
 import CitiesLeftBlock from '../cities-left-block/cities-left-block';
 import CitiesRightBlock from '../cities-rigth-block/cities-rigth-block';
 
+const CitiesBox = styled(Box)`
+  display: flex;
+  flex-grow: 1;
+  overflow-y: hidden;
+`
+
 const CitiesContainer = styled(Container)`
   display: flex;
 `
@@ -11,12 +17,12 @@ const CitiesContainer = styled(Container)`
 function Cities() {
 
   return (
-    <Box>
-      <CitiesContainer maxWidth="xl">
+    <CitiesBox>
+      <CitiesContainer maxWidth="lg">
         <CitiesLeftBlock />
         <CitiesRightBlock />
       </CitiesContainer>
-    </Box>
+    </CitiesBox>
 
   )
 }

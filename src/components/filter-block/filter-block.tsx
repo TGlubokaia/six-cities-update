@@ -7,7 +7,7 @@ function FilterBlock() {
 
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
       <List>
         <ListItem>
           <Link>

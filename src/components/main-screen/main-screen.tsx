@@ -6,7 +6,9 @@ import FilterBlock from '../filter-block/filter-block';
 import Cities from '../cities/cities';
 
 const MainScreenBlock = styled.div`
-  color: #383838;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 `
 
 function MainScreen() {

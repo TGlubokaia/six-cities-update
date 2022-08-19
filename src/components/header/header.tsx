@@ -5,10 +5,9 @@ import HeaderRightBlock from '../header-right-block/header-right-block';
 
 
 function Header() {
-
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <AppBar
           position='relative'
           color='transparent'
