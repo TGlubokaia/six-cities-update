@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid  } from '@mui/material';
+import { Grid } from '@mui/material';
 import styled from '@emotion/styled'
 import OfferItem from '../offer-item/offer-item';
 

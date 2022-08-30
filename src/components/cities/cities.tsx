@@ -9,7 +9,6 @@ const CitiesBox = styled(Box)`
   flex-grow: 1;
   overflow-y: hidden;
 `
-
 const CitiesContainer = styled(Container)`
   display: flex;
 `
