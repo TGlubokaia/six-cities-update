@@ -9,6 +9,7 @@ const MapSection = styled.section`
   background-size: cover;
 `
 
+
 function Map() {
   return (
     <MapSection />

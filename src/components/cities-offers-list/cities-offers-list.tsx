@@ -8,6 +8,7 @@ const OffersGrid = styled(Grid)`
   padding-right: 14px;
 `
 
+
 function CitiesOffersList() {
   return (
     <OffersGrid container spacing={2}>

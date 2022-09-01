@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   margin-right: auto;
 `
 
+
 function HeaderLeftBlock() {
   return (
     <Wrapper>

@@ -13,8 +13,8 @@ const CitiesContainer = styled(Container)`
   display: flex;
 `
 
-function Cities() {
 
+function Cities() {
   return (
     <CitiesBox>
       <CitiesContainer maxWidth="lg">
@@ -22,7 +22,6 @@ function Cities() {
         <CitiesRightBlock />
       </CitiesContainer>
     </CitiesBox>
-
   )
 }
 

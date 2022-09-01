@@ -11,8 +11,8 @@ const MainScreenBlock = styled.div`
   height: 100vh;
 `
 
-function MainScreen() {
 
+function MainScreen() {
   return (
     <MainScreenBlock>
       <CssBaseline />
@@ -20,7 +20,6 @@ function MainScreen() {
       <FilterBlock />
       <Cities />
     </MainScreenBlock>
-
   )
 }
 

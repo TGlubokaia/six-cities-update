@@ -54,5 +54,6 @@ const cities = [
   },
 ];
 
+const citiesNames = cities.map((city) => city.cityName);
 
-export {cities};
+export { cities, citiesNames };

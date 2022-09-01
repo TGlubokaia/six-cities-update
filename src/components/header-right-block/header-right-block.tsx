@@ -21,6 +21,7 @@ const AuthText = styled(ListItemText)`
   align-items: center;
 `
 
+
 function HeaderRightBlock() {
   return (
     <nav aria-label="authorization">

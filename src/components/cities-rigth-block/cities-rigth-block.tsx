@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   flex-grow: 1;
 `
 
+
 function CitiesRightBlock() {
   return (
     <Wrapper>

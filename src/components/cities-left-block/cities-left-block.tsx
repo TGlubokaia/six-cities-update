@@ -12,6 +12,7 @@ const OffersSection = styled.section`
   align-items: flex-start;
 `
 
+
 function CitiesLeftBlock() {
   return (
     <OffersSection>

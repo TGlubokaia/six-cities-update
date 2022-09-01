@@ -1,25 +1,25 @@
 import React from 'react';
-import { Container, Box, List, ListItem, Link, ListItemText } from '@mui/material';
+import styled from '@emotion/styled';
+import { Container, Box, List} from '@mui/material';
+import { citiesNames } from '../../utils/cities';
+import FilterItem from '../filter-item/filter-item';
 
+const CitiesList = styled(List)`
+  display: flex;
+`
 
 
 function FilterBlock() {
-
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
       <Container maxWidth="lg">
-      <List>
-        <ListItem>
-          <Link>
-            <ListItemText>
-              City
-            </ListItemText>
-          </Link>
-        </ListItem>
-      </List>
+        <CitiesList>
+          {citiesNames.map(cityName => (
+            <FilterItem key={cityName} />
+          ))}
+        </CitiesList>
       </Container>
     </Box>
-
   )
 }
 
