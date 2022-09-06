@@ -3,16 +3,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Rating, Checkbox } from '@mui/material';
+import { CardActionArea, Rating, Checkbox, Link } from '@mui/material';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import styled from '@emotion/styled';
 
 const OfferCard = styled(Card)`
   overflow: visible;
-`
-const OfferTitle = styled.h2`
-  margin-top: 5px;
+  max-width: 345px;
 `
 
 const PremiumMark = styled.div`
@@ -39,45 +37,70 @@ const CheckboxButton = styled(Checkbox)`
   padding: 0;
 `
 
+const OfferTitle = styled.h3`
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 1.223;
+  font-weight: 700;
+  font-style: oblique;
+`
+
+const OfferLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transform: skew(-15deg);
+  transition: background .3s,color .3s,text-shadow .3s;
+  &:hover {text-shadow: 0.5px 0 0, -0.5px 0 0;}
+  &:focus {text-shadow: 0.5px 0 0, -0.5px 0 0;}
+`
+
 
 function OfferItem() {
   return (
-    <OfferCard sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="../img/apartment-01.jpg"
-          alt="green iguana"
-        />
-        <CardContent>
-          <PremiumMark>
-            <span>Premium</span>
-          </PremiumMark>
-          <TitleBox>
-            <div>
-              <Typography variant="h6" component="span">
-                €120
-              </Typography>
-              <Typography variant="body2" component="span">
-                /night
-              </Typography>
-            </div>
-            <CheckboxButton
-              icon={<BookmarkBorderIcon />}
-              checkedIcon={<BookmarkIcon />}
-            />
-          </TitleBox>
-          <Rating value={4} readOnly />
-          <OfferTitle>
-            Beautiful & luxurious apartment at great location
-          </OfferTitle>
-          <Typography variant="body2">
-            Apartment
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </OfferCard>
+    <article>
+      <OfferCard>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image="../img/apartment-01.jpg"
+            alt="green iguana"
+          />
+          <CardContent>
+            <PremiumMark>
+              <span>Premium</span>
+            </PremiumMark>
+            <TitleBox>
+              <div>
+                <Typography variant="h6" component="span">
+                  €120
+                </Typography>
+                <Typography variant="body2" component="span">
+                  /night
+                </Typography>
+              </div>
+              <CheckboxButton
+                icon={<BookmarkBorderIcon />}
+                checkedIcon={<BookmarkIcon />}
+                aria-label="Add to favorites"
+              />
+            </TitleBox>
+            <Rating value={4} readOnly />
+            <OfferTitle>
+              <OfferLink href="#" aria-label="Open the offer">
+                Beautiful & luxurious apartment at great location
+              </OfferLink>
+            </OfferTitle>
+            <Typography variant="body2">
+              Apartment
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </OfferCard>
+    </article>
+
   );
 }
 

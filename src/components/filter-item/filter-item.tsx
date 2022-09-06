@@ -29,7 +29,7 @@ const CityLink = styled(Link)`
 function FilterItem() {
   return (
     <CityItem>
-      <CityLink>
+      <CityLink href="#" aria-label="Amsterdam">
         <ListItemText>
           {"Amsterdam"}
         </ListItemText>

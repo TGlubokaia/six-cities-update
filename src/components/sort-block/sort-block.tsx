@@ -1,13 +1,9 @@
 import React from 'react';
-import { List, ListItemButton, ListItemText, MenuItem, Menu, Typography } from '@mui/material';
+import { List, ListItemButton, ListItemText, MenuItem, Menu, Typography, Box } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import styled from '@emotion/styled'
 
-const SortButtonItem = styled(ListItemButton)`
-  padding: 0;
-  margin-left: 10px;
-`
-const SortWrapper = styled.div`
+const SortWrapper = styled(Box)`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -18,6 +14,12 @@ const SortText = styled(Typography)`
   line-height: 1.167;
   font-weight: 700;
 `
+
+const SortItemButton = styled(ListItemButton)`
+  padding: 0;
+  margin-left: 10px;
+`
+
 
 const options = [
   'Popular',
@@ -49,13 +51,13 @@ function SortBlock() {
 
   return (
     <SortWrapper>
-      <SortText>
+      <SortText variant="caption">
         Sort by
       </SortText>
       <List
         aria-label="Sort options"
       >
-        <SortButtonItem
+        <SortItemButton
           id="lock-button"
           aria-haspopup="listbox"
           aria-controls="lock-menu"
@@ -68,7 +70,7 @@ function SortBlock() {
             secondary={options[selectedIndex]}
           />
           <KeyboardArrowDownIcon />
-        </SortButtonItem>
+        </SortItemButton>
       </List>
       <Menu
         id="lock-menu"

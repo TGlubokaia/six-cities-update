@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled'
-import { List, ListItem, Link, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
+import { Box, List, ListItem, Link, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
 
 const AuthList = styled(List)`
   display: flex;
@@ -24,10 +24,10 @@ const AuthText = styled(ListItemText)`
 
 function HeaderRightBlock() {
   return (
-    <nav aria-label="authorization">
+    <Box component="nav" aria-label="Authorization menu">
       <AuthList>
         <ListItem>
-          <AuthLink>
+          <AuthLink href="href" aria-label="Open favorites">
             <ListItemAvatar>
               <Avatar alt="user avatar" src="../img/avatar.svg" />
             </ListItemAvatar>
@@ -37,15 +37,14 @@ function HeaderRightBlock() {
           </AuthLink>
         </ListItem>
         <ListItem>
-          <AuthLink>
+          <AuthLink href="href" aria-label="Sigh out">
             <AuthText>
               Sigh out
             </AuthText>
           </AuthLink>
         </ListItem>
       </AuthList>
-    </ nav>
-
+    </ Box>
   )
 }
 
