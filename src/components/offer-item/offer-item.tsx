@@ -47,13 +47,8 @@ const OfferTitle = styled.h3`
 
 const OfferLink = styled(Link)`
   display: block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
   transform: skew(-15deg);
   transition: background .3s,color .3s,text-shadow .3s;
-  &:hover {text-shadow: 0.5px 0 0, -0.5px 0 0;}
-  &:focus {text-shadow: 0.5px 0 0, -0.5px 0 0;}
 `
 
 
@@ -83,7 +78,7 @@ function OfferItem() {
               </div>
               <CheckboxButton
                 icon={<BookmarkBorderIcon />}
-                checkedIcon={<BookmarkIcon />}
+                checkedIcon={<BookmarkIcon color='secondary'/>}
                 aria-label="Add to favorites"
               />
             </TitleBox>

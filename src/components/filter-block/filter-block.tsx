@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from '@emotion/styled';
 import { Box, Container, Typography, List } from '@mui/material';
 import { citiesNames } from '../../utils/cities';
@@ -23,6 +23,12 @@ const CitiesList = styled(List)`
 
 
 function FilterBlock() {
+  const [selectedCity, setSelectedCity] = useState('');
+  const handleCityOnClick = (city: string) => {
+    setSelectedCity(city);
+  };
+
+
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
       <Container component='section' maxWidth="lg">
@@ -31,7 +37,7 @@ function FilterBlock() {
         </FilterTitle>
         <CitiesList aria-label="Filter options">
           {citiesNames.map(cityName => (
-            <FilterItem key={cityName} />
+            <FilterItem key={cityName} city={cityName} selectedCity={selectedCity} cityOnClickHAndler={handleCityOnClick}/>
           ))}
         </CitiesList>
       </Container>

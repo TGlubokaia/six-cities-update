@@ -11,27 +11,29 @@ const CityItem = styled(ListItem)`
 const CityLink = styled(Link)`
   display: block;
   padding: 9px 21px 6px 11px;
-  text-decoration: none;
-  color: inherit;
   font-size: 19px;
   line-height: 1.211;
   font-weight: 300;
   font-style: oblique;
-  cursor: pointer;
   transform: skew(-15deg);
   border-radius: 3px;
   transition: background .3s,color .3s,text-shadow .3s;
-  &:hover {text-shadow: 0.5px 0 0, -0.5px 0 0;}
-  &:focus {text-shadow: 0.5px 0 0, -0.5px 0 0;}
+
 `
 
 
-function FilterItem() {
+function FilterItem(props: { city: string, selectedCity: string, cityOnClickHAndler: Function }) {
+  const { city, selectedCity, cityOnClickHAndler } = props;
+
+
   return (
-    <CityItem>
-      <CityLink href="#" aria-label="Amsterdam">
+    <CityItem onClick={() => cityOnClickHAndler(city)}>
+      <CityLink
+        variant={selectedCity === city ? "caption" : undefined}
+        href="#"
+        aria-label={`${city}`}>
         <ListItemText>
-          {"Amsterdam"}
+          {`${city}`}
         </ListItemText>
       </CityLink>
     </CityItem>
