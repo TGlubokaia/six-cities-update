@@ -20,7 +20,6 @@ const SortItemButton = styled(ListItemButton)`
   margin-left: 10px;
 `
 
-
 const options = [
   'Popular',
   'Price: low to high',

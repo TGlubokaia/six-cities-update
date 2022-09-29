@@ -1,6 +1,11 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import styled from '@emotion/styled'
+
+const Wrapper = styled(Box)`
+  display: flex;
+  flex-grow: 1;
+`
 
 const MapSection = styled.section`
   width: 100%;
@@ -23,15 +28,16 @@ const MapSectionTitle = styled(Typography)`
   overflow: hidden;
 `
 
-
-function Map() {
+function CitiesRightBlock() {
   return (
-    <MapSection>
-      <MapSectionTitle variant='h2'>
-        Map
-      </MapSectionTitle>
-    </MapSection>
+    <Wrapper>
+      <MapSection>
+        <MapSectionTitle variant='h2'>
+          Map
+        </MapSectionTitle>
+      </MapSection>
+    </Wrapper>
   )
 }
 
-export default Map;
+export default CitiesRightBlock;

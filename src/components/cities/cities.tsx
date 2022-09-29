@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled'
 import { Container, Box } from '@mui/material';
-import CitiesLeftBlock from '../cities-left-block/cities-left-block';
-import CitiesRightBlock from '../cities-rigth-block/cities-rigth-block';
+import CitiesLeftBlock from '../cities-offers-block/cities-offers-block';
+import CitiesRightBlock from '../cities-map-block/cities-map-block';
 
 const CitiesBox = styled(Box)`
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, AppBar, Toolbar } from '@mui/material';
-import HeaderLeftBlock from '../header-left-block/header-left-block';
-import HeaderRightBlock from '../header-right-block/header-right-block';
+import HeaderLogoBlock from '../header-logo-block/header-logo-block';
+import HeaderMenuBlock from '../header-menu-block/header-menu-block';
 
 
 function Header() {
@@ -13,8 +13,8 @@ function Header() {
           color='transparent'
           sx={{ boxShadow: 'none' }}>
           <Toolbar disableGutters>
-            <HeaderLeftBlock />
-            <HeaderRightBlock />
+            <HeaderLogoBlock />
+            <HeaderMenuBlock />
           </Toolbar>
         </AppBar>
 

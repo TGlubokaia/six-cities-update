@@ -8,13 +8,8 @@ const AuthList = styled(List)`
 const AuthLink = styled(Link)`
   display: flex;
   font-size: 14px;
-  color: inherit;
   line-height: 1.2143;
-  text-decoration: none;
-  cursor: pointer;
   transition: text-shadow .3s;
-  &:hover {text-shadow: 0.5px 0 0, -0.5px 0 0;}
-  &:focus {text-shadow: 0.5px 0 0, -0.5px 0 0;}
 `
 const AuthText = styled(ListItemText)`
   display: flex;
@@ -22,7 +17,7 @@ const AuthText = styled(ListItemText)`
 `
 
 
-function HeaderRightBlock() {
+function HeaderMenuBlock() {
   return (
     <Box component="nav" aria-label="Authorization menu">
       <AuthList>
@@ -48,4 +43,4 @@ function HeaderRightBlock() {
   )
 }
 
-export default HeaderRightBlock;
+export default HeaderMenuBlock;

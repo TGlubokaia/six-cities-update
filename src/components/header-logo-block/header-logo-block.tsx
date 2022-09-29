@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `
 
 
-function HeaderLeftBlock() {
+function HeaderLogoBlock() {
   return (
     <Wrapper>
       <Logo />
@@ -16,4 +16,4 @@ function HeaderLeftBlock() {
   )
 }
 
-export default HeaderLeftBlock;
+export default HeaderLogoBlock;
