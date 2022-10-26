@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
+// import Map from '../map/map';
 
 const Wrapper = styled(Box)`
   display: flex;
