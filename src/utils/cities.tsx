@@ -1,3 +1,5 @@
+import { CityName } from "../types/types";
+
 const DEFAULT_ZOOM = 12;
 
 const cities = [
@@ -56,4 +58,9 @@ const cities = [
 
 const citiesNames = cities.map((city) => city.cityName);
 
-export { cities, citiesNames };
+const getCityData = (selectedCity: CityName) => {
+  const cityData = cities.find((city) => city.cityName === selectedCity);
+  return cityData;
+};
+
+export {cities, citiesNames, getCityData};
