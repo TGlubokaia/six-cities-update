@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled'
 import { Container, Box } from '@mui/material';
-import CitiesLeftBlock from '../cities-offers-block/cities-offers-block';
-import CitiesRightBlock from '../cities-map-block/cities-map-block';
+import CitiesOffersBlock from '../cities-offers-block/cities-offers-block';
+import CitiesMapBlock from '../cities-map-block/cities-map-block';
 
 const CitiesBox = styled(Box)`
   display: flex;
@@ -18,8 +18,8 @@ function Cities() {
   return (
     <CitiesBox>
       <CitiesContainer maxWidth="lg">
-        <CitiesLeftBlock />
-        <CitiesRightBlock />
+        <CitiesOffersBlock />
+        <CitiesMapBlock />
       </CitiesContainer>
     </CitiesBox>
   )

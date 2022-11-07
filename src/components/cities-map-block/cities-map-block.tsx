@@ -29,7 +29,7 @@ const MapSectionTitle = styled(Typography)`
   overflow: hidden;
 `
 
-function CitiesRightBlock() {
+function CitiesMapBlock() {
   return (
     <Wrapper>
       <MapSection>
@@ -41,4 +41,4 @@ function CitiesRightBlock() {
   )
 }
 
-export default CitiesRightBlock;
+export default CitiesMapBlock;

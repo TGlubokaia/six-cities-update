@@ -1,26 +1,18 @@
-import axios from 'axios';
+import axios, {AxiosResponse} from 'axios';
+import { Offers } from '../types/types';
 
 const BACKEND_URL = 'https://10.react.pages.academy/six-cities';
 const REQUEST_TIMEOUT = 5000;
-
-const HttpCode = {
-  UNAUTHORIZED: 401,
-};
-
-const token = localStorage.getItem('token') ?? '';
 
 const createAPI = () => {
   const api = axios.create({
     baseURL: BACKEND_URL,
     timeout: REQUEST_TIMEOUT,
-    headers: {
-      'x-token': token,
-    },
   });
 
-  const onSuccess = (response) => response;
+  const onSuccess = (response: AxiosResponse<Offers>) => response;
 
-  const onFail = (err) => {
+  const onFail = (err: Error) => {
     throw err;
   };
 

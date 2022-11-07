@@ -36,7 +36,7 @@ const OffersInfo = styled(Typography)`
   font-style: oblique;
 `
 
-function CitiesLeftBlock() {
+function CitiesOffersBlock() {
   return (
     <OffersSection>
       <OffersTitle variant='h2'>
@@ -51,4 +51,4 @@ function CitiesLeftBlock() {
   )
 }
 
-export default CitiesLeftBlock;
+export default CitiesOffersBlock;

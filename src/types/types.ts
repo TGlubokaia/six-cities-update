@@ -1,5 +1,3 @@
-import store from "../store/store";
-
 export type CityData = {
   location: {
     latitude: number,
@@ -54,4 +52,4 @@ export type Offer = {
   isFavorite: boolean,
 };
 
-export type Offers = Offer[];
+export type Offers = Offer[] | [];
