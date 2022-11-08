@@ -1,13 +1,8 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { loadOffers } from '../action';
-import { Offers } from '../../types/types';
+import { StoreData } from '../../types/store';
 
-type StateType = {
-  initialOffers: Offers,
-  isDataLoaded: boolean
-}
-
-const initialState: StateType = {
+const initialState: StoreData = {
   initialOffers: [],
   isDataLoaded: false,
 };
