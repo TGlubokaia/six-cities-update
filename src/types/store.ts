@@ -24,17 +24,6 @@ export type StoreFilter = {
   selectedCity: string;
 };
 
-export type Store1 = {
-  'DATA': StoreData;
-  'FILTER': StoreFilter;
-};
-
-export type Store2 = {
-  'DATA': {
-    initialOffers: Offers,
-    isDataLoaded: boolean,
-  },
-  'FILTER': {
-    selectedCity: string,
-  };
-}
+export type Store = {
+  DATA: StoreData;
+  FILTER: StoreFilter;
