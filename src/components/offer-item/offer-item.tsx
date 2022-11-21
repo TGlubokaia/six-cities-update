@@ -11,7 +11,7 @@ import styled from '@emotion/styled';
 const OfferCard = styled(Card)`
   overflow: visible;
   max-width: 345px;
-`
+`;
 
 const PremiumMark = styled.div`
   position: absolute;
@@ -26,16 +26,16 @@ const PremiumMark = styled.div`
   transform: skew(-10deg);
   border-radius: 3px;
   z-index: 1000;
-`
+`;
 
 const TitleBox = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const CheckboxButton = styled(Checkbox)`
   padding: 0;
-`
+`;
 
 const OfferTitle = styled.h3`
   margin-top: 5px;
@@ -43,16 +43,16 @@ const OfferTitle = styled.h3`
   line-height: 1.223;
   font-weight: 700;
   font-style: oblique;
-`
+`;
 
 const OfferLink = styled(Link)`
   display: block;
   transform: skew(-15deg);
   transition: background .3s,color .3s,text-shadow .3s;
-`
+`;
 
 
-function OfferItem() {
+const OfferItem: React.FC = () => {
   return (
     <article>
       <OfferCard>
@@ -95,8 +95,7 @@ function OfferItem() {
         </CardActionArea>
       </OfferCard>
     </article>
-
   );
-}
+};
 
 export default OfferItem;

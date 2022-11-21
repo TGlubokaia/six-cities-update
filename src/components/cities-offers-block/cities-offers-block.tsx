@@ -12,7 +12,7 @@ const OffersSection = styled.section`
   padding-bottom: 7px;
   flex-direction: column;
   align-items: flex-start;
-`
+`;
 
 const OffersTitle = styled(Typography)`
   position: absolute;
@@ -25,7 +25,7 @@ const OffersTitle = styled(Typography)`
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-`
+`;
 
 const OffersInfo = styled(Typography)`
   margin-bottom: 22px;
@@ -34,9 +34,9 @@ const OffersInfo = styled(Typography)`
   line-height: 1.167;
   font-weight: 700;
   font-style: oblique;
-`
+`;
 
-function CitiesOffersBlock() {
+const CitiesOffersBlock: React.FC = () => {
   return (
     <OffersSection>
       <OffersTitle variant='h2'>
@@ -49,6 +49,6 @@ function CitiesOffersBlock() {
       <CitiesOffersList />
     </OffersSection>
   )
-}
+};
 
 export default CitiesOffersBlock;

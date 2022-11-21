@@ -16,14 +16,14 @@ const FilterTitle = styled(Typography)`
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-`
+`;
 
 const CitiesList = styled(List)`
   display: flex;
-`
+`;
 
 
-function FilterBlock() {
+const FilterBlock: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState('');
   const handleCityOnClick = (city: CityName) => {
     setSelectedCity(city);
@@ -44,6 +44,6 @@ function FilterBlock() {
       </Container>
     </Box>
   )
-}
+};
 
 export default FilterBlock;

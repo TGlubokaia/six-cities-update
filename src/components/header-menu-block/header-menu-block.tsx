@@ -4,20 +4,22 @@ import { Box, List, ListItem, Link, ListItemAvatar, Avatar, ListItemText } from 
 
 const AuthList = styled(List)`
   display: flex;
-`
+`;
+
 const AuthLink = styled(Link)`
   display: flex;
   font-size: 14px;
   line-height: 1.2143;
   transition: text-shadow .3s;
-`
+`;
+
 const AuthText = styled(ListItemText)`
   display: flex;
   align-items: center;
-`
+`;
 
 
-function HeaderMenuBlock() {
+const HeaderMenuBlock: React.FC = () => {
   return (
     <Box component="nav" aria-label="Authorization menu">
       <AuthList>
@@ -41,6 +43,6 @@ function HeaderMenuBlock() {
       </AuthList>
     </ Box>
   )
-}
+};
 
 export default HeaderMenuBlock;

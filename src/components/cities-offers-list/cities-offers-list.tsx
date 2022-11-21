@@ -6,10 +6,10 @@ import OfferItem from '../offer-item/offer-item';
 const OffersGrid = styled(Grid)`
   overflow-y: auto;
   padding-right: 14px;
-`
+`;
 
 
-function CitiesOffersList() {
+const CitiesOffersList: React.FC = () => {
   return (
     <OffersGrid container spacing={2}>
       <Grid item xs={6}>
@@ -30,6 +30,6 @@ function CitiesOffersList() {
     
     </OffersGrid>
   )
-}
+};
 
 export default CitiesOffersList;

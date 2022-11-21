@@ -8,13 +8,14 @@ const CitiesBox = styled(Box)`
   display: flex;
   flex-grow: 1;
   overflow-y: hidden;
-`
+`;
+
 const CitiesContainer = styled(Container)`
   display: flex;
-`
+`;
 
 
-function Cities() {
+const Cities: React.FC = () => {
   return (
     <CitiesBox>
       <CitiesContainer maxWidth="lg">
@@ -23,6 +24,6 @@ function Cities() {
       </CitiesContainer>
     </CitiesBox>
   )
-}
+};
 
 export default Cities;

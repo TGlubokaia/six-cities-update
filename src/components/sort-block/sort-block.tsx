@@ -7,18 +7,18 @@ const SortWrapper = styled(Box)`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-`
+`;
 
 const SortText = styled(Typography)`
   font-size: 12px;
   line-height: 1.167;
   font-weight: 700;
-`
+`;
 
 const SortItemButton = styled(ListItemButton)`
   padding: 0;
   margin-left: 10px;
-`
+`;
 
 const options = [
   'Popular',
@@ -28,7 +28,7 @@ const options = [
 ];
 
 
-function SortBlock() {
+const SortBlock: React.FC = () =>  {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const open = Boolean(anchorEl);
@@ -93,6 +93,6 @@ function SortBlock() {
       </Menu>
     </SortWrapper>
   );
-}
+};
 
 export default SortBlock;

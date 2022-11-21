@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 const Wrapper = styled(Box)`
   display: flex;
   flex-grow: 1;
-`
+`;
 
 const MapSection = styled.section`
   width: 100%;
@@ -14,7 +14,7 @@ const MapSection = styled.section`
   background-image: url(../img/map@2x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-`
+`;
 
 const MapSectionTitle = styled(Typography)`
   position: absolute;
@@ -27,9 +27,9 @@ const MapSectionTitle = styled(Typography)`
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-`
+`;
 
-function CitiesMapBlock() {
+const CitiesMapBlock: React.FC = () => {
   return (
     <Wrapper>
       <MapSection>
@@ -39,6 +39,6 @@ function CitiesMapBlock() {
       </MapSection>
     </Wrapper>
   )
-}
+};
 
 export default CitiesMapBlock;

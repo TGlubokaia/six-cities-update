@@ -7,7 +7,8 @@ const CityItem = styled(ListItem)`
   margin-bottom: 19px;
   padding: 0;
   width: auto;
-`
+`;
+
 const CityLink = styled(Link)`
   display: block;
   padding: 9px 21px 6px 11px;
@@ -18,13 +19,11 @@ const CityLink = styled(Link)`
   transform: skew(-15deg);
   border-radius: 3px;
   transition: background .3s,color .3s,text-shadow .3s;
-
-`
+`;
 
 
 function FilterItem(props: { city: string, selectedCity: string, cityOnClickHAndler: Function }) {
   const { city, selectedCity, cityOnClickHAndler } = props;
-
 
   return (
     <CityItem onClick={() => cityOnClickHAndler(city)}>

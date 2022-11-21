@@ -10,7 +10,7 @@ const MainScreenBlock = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-`
+`;
 
 const MainTitle = styled(Typography)`
   position: absolute;
@@ -23,10 +23,10 @@ const MainTitle = styled(Typography)`
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-`
+`;
 
 
-function MainScreen() {
+const MainScreen: React.FC = () =>  {
   return (
     <MainScreenBlock>
       <CssBaseline />
@@ -38,6 +38,6 @@ function MainScreen() {
       <Cities />
     </MainScreenBlock>
   )
-}
+};
 
 export default MainScreen;

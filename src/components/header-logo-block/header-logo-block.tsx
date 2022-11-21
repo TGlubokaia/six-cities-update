@@ -4,16 +4,16 @@ import Logo from '../logo/logo';
 
 const Wrapper = styled.div`
   margin-right: auto;
-`
+`;
 
 
-function HeaderLogoBlock() {
+const HeaderLogoBlock: React.FC = () => {
   return (
     <Wrapper>
       <Logo />
     </Wrapper>
 
   )
-}
+};
 
 export default HeaderLogoBlock;

@@ -4,7 +4,7 @@ import HeaderLogoBlock from '../header-logo-block/header-logo-block';
 import HeaderMenuBlock from '../header-menu-block/header-menu-block';
 
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
       <Container maxWidth="lg">
@@ -20,9 +20,7 @@ function Header() {
 
       </Container>
     </Box>
-
-
   )
-}
+};
 
 export default Header;
