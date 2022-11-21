@@ -27,3 +27,4 @@ export type StoreFilter = {
 export type Store = {
   DATA: StoreData;
   FILTER: StoreFilter;
+};

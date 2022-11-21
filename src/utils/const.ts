@@ -13,7 +13,7 @@ const APIRoute = {
 interface INameSpace {
   DATA: 'DATA';
   FILTER: 'FILTER';
-}
+};
 
 const NameSpace: INameSpace = {
   DATA: 'DATA',
