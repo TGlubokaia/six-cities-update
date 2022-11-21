@@ -24,9 +24,7 @@ const currentIcon = new Icon({
 });
 
 
-function Map(props: MapProps): JSX.Element {
-  const { city, points, selectedPoint } = props;
-
+const Map: React.FC<MapProps> = ({city, points, selectedPoint}): JSX.Element => {
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
 
@@ -58,6 +56,6 @@ function Map(props: MapProps): JSX.Element {
       <span>{city.cityName}</span>
     </section>
   );
-}
+};
 
 export default Map;

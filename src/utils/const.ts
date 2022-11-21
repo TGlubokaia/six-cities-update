@@ -1,3 +1,5 @@
+import { NameSpaceKeys } from "../types/types";
+
 const URL_MARKER_DEFAULT = 'img/pin.svg';
 
 const URL_MARKER_CURRENT = 'img/pin-active.svg';
@@ -10,12 +12,7 @@ const APIRoute = {
   OFFERS: '/hotels',
 };
 
-interface INameSpace {
-  DATA: 'DATA';
-  FILTER: 'FILTER';
-};
-
-const NameSpace: INameSpace = {
+const NameSpace: NameSpaceKeys = {
   DATA: 'DATA',
   FILTER: 'FILTER',
 };

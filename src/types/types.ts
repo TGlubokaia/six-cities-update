@@ -53,3 +53,8 @@ export type Offer = {
 };
 
 export type Offers = Offer[] | [];
+
+export type NameSpaceKeys = {
+  DATA: 'DATA';
+  FILTER: 'FILTER';
+};

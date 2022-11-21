@@ -21,9 +21,14 @@ const CityLink = styled(Link)`
   transition: background .3s,color .3s,text-shadow .3s;
 `;
 
+type FilterItemProps = {
+  city: string;
+  selectedCity: string;
+  cityOnClickHAndler: (city: string) => void;
+}
 
-function FilterItem(props: { city: string, selectedCity: string, cityOnClickHAndler: Function }) {
-  const { city, selectedCity, cityOnClickHAndler } = props;
+
+const FilterItem: React.FC<FilterItemProps> = ({ city, selectedCity, cityOnClickHAndler}) => {
 
   return (
     <CityItem onClick={() => cityOnClickHAndler(city)}>
@@ -37,6 +42,6 @@ function FilterItem(props: { city: string, selectedCity: string, cityOnClickHAnd
       </CityLink>
     </CityItem>
   )
-}
+};
 
 export default FilterItem;
