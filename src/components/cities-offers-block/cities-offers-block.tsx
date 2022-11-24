@@ -1,6 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Typography } from '@mui/material';
 import styled from '@emotion/styled';
+import { getOffers } from '../../store/offers-data/selectors';
 import SortBlock from '../sort-block/sort-block';
 import CitiesOffersList from '../cities-offers-list/cities-offers-list';
 
@@ -37,16 +39,18 @@ const OffersInfo = styled(Typography)`
 `;
 
 const CitiesOffersBlock: React.FC = () => {
+  const storedOffers = useSelector(getOffers);
+
   return (
     <OffersSection>
       <OffersTitle variant='h2'>
         Offers
       </OffersTitle>
       <OffersInfo>
-        312 places to stay in Amsterdam
+        {storedOffers.length} places to stay in Amsterdam
       </OffersInfo>
       <SortBlock />
-      <CitiesOffersList />
+      <CitiesOffersList offers={storedOffers}/>
     </OffersSection>
   )
 };

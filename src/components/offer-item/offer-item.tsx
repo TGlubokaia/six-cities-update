@@ -7,6 +7,7 @@ import { CardActionArea, Rating, Checkbox, Link } from '@mui/material';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import styled from '@emotion/styled';
+import { Offer } from '../../types/types';
 
 const OfferCard = styled(Card)`
   overflow: visible;
@@ -51,8 +52,14 @@ const OfferLink = styled(Link)`
   transition: background .3s,color .3s,text-shadow .3s;
 `;
 
+type OfferItemProps = {
+  offer: Offer;
+};
 
-const OfferItem: React.FC = () => {
+
+const OfferItem: React.FC<OfferItemProps> = ({ offer }) => {
+  const { price, type, title, previewImage, isPremium, rating } = offer;
+
   return (
     <article>
       <OfferCard>
@@ -60,17 +67,19 @@ const OfferItem: React.FC = () => {
           <CardMedia
             component="img"
             height="140"
-            image="../img/apartment-01.jpg"
+            image={previewImage}
             alt="green iguana"
           />
           <CardContent>
-            <PremiumMark>
-              <span>Premium</span>
-            </PremiumMark>
+            {isPremium &&
+              <PremiumMark>
+                <span>Premium</span>
+              </PremiumMark>
+            }
             <TitleBox>
               <div>
                 <Typography variant="h6" component="span">
-                  €120
+                  €{price}
                 </Typography>
                 <Typography variant="body2" component="span">
                   /night
@@ -78,18 +87,18 @@ const OfferItem: React.FC = () => {
               </div>
               <CheckboxButton
                 icon={<BookmarkBorderIcon />}
-                checkedIcon={<BookmarkIcon color='secondary'/>}
+                checkedIcon={<BookmarkIcon color='secondary' />}
                 aria-label="Add to favorites"
               />
             </TitleBox>
-            <Rating value={4} readOnly />
+            <Rating value={rating} readOnly />
             <OfferTitle>
               <OfferLink href="#" aria-label="Open the offer">
-                Beautiful & luxurious apartment at great location
+                {title}
               </OfferLink>
             </OfferTitle>
             <Typography variant="body2">
-              Apartment
+              {type}
             </Typography>
           </CardContent>
         </CardActionArea>
