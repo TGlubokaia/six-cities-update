@@ -9,9 +9,13 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import styled from '@emotion/styled';
 import { Offer } from '../../types/types';
 
+const OfferArticle = styled.article`
+  height: 100%;
+`;
+
 const OfferCard = styled(Card)`
-  overflow: visible;
   max-width: 345px;
+  height: 100%;
 `;
 
 const PremiumMark = styled.div`
@@ -61,7 +65,7 @@ const OfferItem: React.FC<OfferItemProps> = ({ offer }) => {
   const { price, type, title, previewImage, isPremium, rating } = offer;
 
   return (
-    <article>
+    <OfferArticle>
       <OfferCard>
         <CardActionArea>
           <CardMedia
@@ -103,7 +107,7 @@ const OfferItem: React.FC<OfferItemProps> = ({ offer }) => {
           </CardContent>
         </CardActionArea>
       </OfferCard>
-    </article>
+    </OfferArticle>
   );
 };
 

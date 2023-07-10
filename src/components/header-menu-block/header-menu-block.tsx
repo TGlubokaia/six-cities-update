@@ -36,7 +36,7 @@ const HeaderMenuBlock: React.FC = () => {
         <ListItem>
           <AuthLink href="href" aria-label="Sigh out">
             <AuthText>
-              Sigh out
+              Sign out
             </AuthText>
           </AuthLink>
         </ListItem>

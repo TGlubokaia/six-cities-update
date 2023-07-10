@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Typography } from '@mui/material';
 import styled from '@emotion/styled';
 import { getOffers } from '../../store/offers-data/selectors';
+import { getSelectedCityName } from '../../store/offers-filter/selectors';
 import SortBlock from '../sort-block/sort-block';
 import CitiesOffersList from '../cities-offers-list/cities-offers-list';
 
@@ -40,6 +41,8 @@ const OffersInfo = styled(Typography)`
 
 const CitiesOffersBlock: React.FC = () => {
   const storedOffers = useSelector(getOffers);
+  const selectedCity = useSelector(getSelectedCityName);
+  const filteredOffers = storedOffers.filter((offer) => offer.city.name === selectedCity)
 
   return (
     <OffersSection>
@@ -47,10 +50,10 @@ const CitiesOffersBlock: React.FC = () => {
         Offers
       </OffersTitle>
       <OffersInfo>
-        {storedOffers.length} places to stay in Amsterdam
+        {filteredOffers.length} places to stay in {selectedCity}
       </OffersInfo>
       <SortBlock />
-      <CitiesOffersList offers={storedOffers}/>
+      <CitiesOffersList offers={filteredOffers}/>
     </OffersSection>
   )
 };

@@ -1,6 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import styled from '@emotion/styled';
 import { Box, Container, Typography, List } from '@mui/material';
+import { getSelectedCityName } from '../../store/offers-filter/selectors';
+import { changeCity } from '../../store/action';
 import { CityName } from '../../types/types';
 import { citiesNames } from '../../utils/cities';
 import FilterItem from '../filter-item/filter-item';
@@ -22,13 +25,13 @@ const CitiesList = styled(List)`
   display: flex;
 `;
 
-
 const FilterBlock: React.FC = () => {
-  const [selectedCity, setSelectedCity] = useState('');
-  const handleCityOnClick = (city: CityName) => {
-    setSelectedCity(city);
-  };
+  const dispatch = useDispatch();
+  const selectedCity = useSelector(getSelectedCityName);
 
+  const handleCityOnClick = (city: CityName) => {
+    dispatch(changeCity(city));
+  };
 
   return (
     <Box sx={{ bgcolor: '#f5f5f5' }}>
@@ -38,7 +41,7 @@ const FilterBlock: React.FC = () => {
         </FilterTitle>
         <CitiesList aria-label="Filter options">
           {citiesNames.map((cityName: CityName) => (
-            <FilterItem key={cityName} city={cityName} selectedCity={selectedCity} cityOnClickHAndler={handleCityOnClick}/>
+            <FilterItem key={cityName} city={cityName} selectedCity={selectedCity} cityOnClickHAndler={handleCityOnClick} />
           ))}
         </CitiesList>
       </Container>

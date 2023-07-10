@@ -10,7 +10,7 @@ const initialState = {
 const offersFilter = createReducer(initialState, (builder) => {
   builder
     .addCase(changeCity, (state, action) => {
-      state.selectedCity= action.payload;
+      state.selectedCity = action.payload;
     });
 });
 
